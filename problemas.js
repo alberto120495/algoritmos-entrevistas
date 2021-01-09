@@ -52,3 +52,29 @@ const ordenar = (arreglo) => {
   return arreglo;
 };
 console.log(ordenar(arregloDesordenado));
+
+//Sacar primera letra de una palabra dada, si no hay palabra, imprimir all done
+const letras = (palabra) => {
+  let arrPalabra = [...palabra];
+  let letra;
+  if (arrPalabra.length > 0) {
+    letra = arrPalabra.shift();
+    return letra;
+  } else {
+    console.log("all done");
+  }
+};
+
+console.log(letras("zoe"));
+
+function pyramid(numPisos) {
+  for (let i = 0; i < numPisos; i++) {
+    let piso = "";
+    for (let j = 0; j < i + 1; j++) {
+      piso = piso + "*";
+    }
+    console.log(piso);
+  }
+}
+
+pyramid(5);
