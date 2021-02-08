@@ -78,6 +78,10 @@ class Lista {
     }
     aux.next = aux.next.next;
   }
+  deleteByNode(node) {
+    node.data = nodo.next.data;
+    node.next = node.next.next;
+  }
 }
 
 let lista = new Lista();
