@@ -1,4 +1,4 @@
-import Node from "./node.js";
+import { Node } from "./node.js";
 
 class BinarySearchTree {
   constructor(data) {
@@ -50,6 +50,7 @@ class BinarySearchTree {
       this.preOrder(node.right, fn);
     }
   }
+
   postOrder(node, fn) {
     if (node !== null) {
       this.postOrder(node.left, fn);

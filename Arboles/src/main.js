@@ -1,21 +1,29 @@
 import BinarySearchTree from "./common/binary-search-tree.js";
+import { NodeWithMultipleChildren } from "./common/node.js";
+import Tree from "./common/tree.js";
 
-let tree = new BinarySearchTree();
-tree.insert(8);
-tree.insert(3);
-tree.insert(2);
-tree.insert(6);
-tree.insert(10);
-tree.insert(9);
-tree.insert(14);
+let bst = new BinarySearchTree();
+bst.insert(8);
+bst.insert(3);
+bst.insert(2);
+bst.insert(6);
+bst.insert(10);
+bst.insert(9);
+bst.insert(14);
 
 //console.log(tree);
-const root = tree.getRootNode();
+const root = bst.getRootNode();
 const arrayResults = [];
-//tree.inOrder(root, (node) => arrayResults.push(node.data));
-//tree.preOrder(root, (node) => arrayResults.push(node.data));
-tree.postOrder(root, (node) => arrayResults.push(node.data));
+//bst.inOrder(root, (node) => arrayResults.push(node.data));
+//bst.preOrder(root, (node) => arrayResults.push(node.data));
+bst.postOrder(root, (node) => arrayResults.push(node.data));
 
 //console.log(arrayResults);
 
-console.log(tree.searchNode(root, 45));
+console.log(bst.searchNode(root, 45));
+
+let tree = new Tree();
+tree.root = new NodeWithMultipleChildren(5);
+tree.root.children.push(new NodeWithMultipleChildren(5));
+
+console.log(tree);

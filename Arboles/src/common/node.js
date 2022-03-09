@@ -7,4 +7,11 @@ class Node {
   }
 }
 
-export default Node;
+class NodeWithMultipleChildren {
+  constructor(data) {
+    this.data = data;
+    this.children = [];
+  }
+}
+
+export { Node, NodeWithMultipleChildren };
